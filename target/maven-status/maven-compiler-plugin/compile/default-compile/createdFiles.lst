@@ -1,0 +1,5 @@
+za/co/spring/boot/SpringBootApplication.class
+za/co/spring/boot/service/impl/FileServiceImpl.class
+za/co/spring/boot/dto/FileDTO.class
+za/co/spring/boot/service/FilePathService.class
+za/co/spring/boot/controller/Controller.class
