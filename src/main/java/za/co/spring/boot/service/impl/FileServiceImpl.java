@@ -1,5 +1,7 @@
 package za.co.spring.boot.service.impl;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import za.co.spring.boot.dto.FileDTO;
 import za.co.spring.boot.service.FilePathService;
@@ -13,6 +15,8 @@ import java.util.stream.Stream;
 
 @Service
 public class FileServiceImpl implements FilePathService {
+    private Logger logger = LoggerFactory.getLogger(FileServiceImpl.class);
+
     @Override
     public FileDTO fileFilePath(String path) {
         FileDTO dto = new FileDTO();
@@ -30,7 +34,7 @@ public class FileServiceImpl implements FilePathService {
                     .filter(k -> k.toFile().isFile())
                     .mapToLong(k -> k.toFile().length())
                     .sum();
-            System.out.println("\n============= FIle Size : " + size + "  =========================================\n");
+            logger.info("\n============= File Size : " + size + "  =========================================\n");
             dto.setDir(key.toString());
             dto.setPath(dir.toAbsolutePath().toString());
             dto.setFileSize(size);
