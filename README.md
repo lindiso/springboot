@@ -3,7 +3,7 @@
 #The app allows a client to recieve  a full path, directory and file size of a given directory on the local file system  
 #It is a maven build project (for project compilation)
 
-it can be run execution the steps below :
+it can be run by executing the steps below :
 
 1. start any IDE (this project was created by InteliJ)
 2. open the project from your local space and locate to package (za.co.springboot)
